@@ -9,15 +9,17 @@ import nltk
 from nltk import word_tokenize
 from nltk.corpus import stopwords, wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
-nltk.download('averaged_perceptron_tagger')
-nltk.download('wordnet')
-nltk.download('stopwords')
-nltk.download('punkt')
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter
 import datetime
+
+
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 LIKE_URL = "https://api.stocktwits.com/api/2/messages/like.json"
 TRENDING_URL = "https://api.stocktwits.com/api/2/streams/trending.json"
