@@ -13,7 +13,7 @@ class TextBlobModel:
         for msg, tickers in self.msg_tickers.items():
             score = TextBlob(msg).sentiment[0]
             for ticker in tickers:
-                if ticker not in self.results.keys():
+                if ticker not in ticker_scores.keys():
                     ticker_scores[ticker] = {'sum_score': score, 'count': 1}
                 else:
                     ticker_scores[ticker] = {'sum_score': score + ticker_scores[ticker]['sum_score'],
